@@ -1,13 +1,11 @@
-import React from 'react';
+import NavMenu from './components/NavMenu';
 import './App.css';
-import Navbar from './components/Navbar';
-
 
 const App = () => {
   return (
-    <div>
-      <h1>this is demo</h1>
-      <Navbar/>
+    <div className='App'>
+      <h1 className='test'>this is demodadada</h1>
+      <NavMenu/>
     </div>
   )
 }

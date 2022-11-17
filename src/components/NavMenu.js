@@ -1,12 +1,13 @@
-import React, { useState , useEffect } from "react";
+import { useState , useEffect } from "react";
 import { Navbar , Container , Nav } from 'react-bootstrap';
+import './NavMenu.css';
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
 
-const NavBar = () => {
+const NavMenu = () => {
     
     const [ activeLink , setActiveLink] = useState('home');
     const [ scrolled , setScrolled ] = useState(false);
@@ -69,4 +70,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default NavMenu;
