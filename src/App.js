@@ -1,11 +1,13 @@
-import NavMenu from './components/NavMenu';
+import NavMenu from './components/NavMenu/NavMenu';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Banner } from './components/Banner/Banner';
 
 const App = () => {
   return (
     <div className='App'>
-      <NavMenu/>
+      <NavMenu />
+      <Banner />
     </div>
   )
 }
