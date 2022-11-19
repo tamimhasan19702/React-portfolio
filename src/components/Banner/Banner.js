@@ -9,7 +9,7 @@ export const Banner = () => {
     const [ isDeleting, setIsDeleting ] = useState(false);
     const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer" ];
     const [ text, setText ] = useState('');
-    const [ delta,setData ] = useState(300- Math.random()*100);
+    const [ delta,setDelta ] = useState(300- Math.random()*100);
     const period = 2000;
 
     useEffect(() => {
@@ -19,7 +19,27 @@ export const Banner = () => {
      return () => {clearInterval(ticker)}; 
     },[text])
 
-    const tick = () 
+    const tick = () => {
+        let i = loopNum % toRotate.length;
+        let fullText = toRotate[i];
+        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+
+        setText(updatedText);
+
+        if(isDeleting){
+            setDelta(prevDelta => prevDelta / 2)
+        }
+
+        if(!isDeleting && updatedText === fullText){
+            setIsDeleting(true);
+            setDelta(period);
+        }
+        else if(isDeleting && updatedText === ''){
+            setIsDeleting(false);
+            setLoopNum(loopNum + 1);
+            setDelta(500);
+        }
+    }
 
 
     return (
@@ -29,8 +49,8 @@ export const Banner = () => {
                 
                 <Col xs={12} md={6} xl={7}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi, I am Tamim Hasan`} <span className="wrap">Web Developer</span></h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur, voluptas laboriosam perspiciatis assumenda eaque ratione nihil </p>
+                  <h1>{`Hi, I am Tamim Hasan`} <span className="wrap">{text}</span></h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur, voluptas laboriosam perspiciatis assumenda eaque ratione nihil. Asperiores consequatur, voluptas laboriosam perspiciatis assumenda eaque ratione nihil. </p>
                   <button onClick={() => console.log(`connect`)}>Let's Connect</button>
                 </Col>
 
