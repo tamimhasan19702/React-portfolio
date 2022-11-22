@@ -55,6 +55,8 @@ export const Repos = () => {
                             }
                            </Row>
                         </Tab.Pane>
+                        <Tab.Pane eventKey="second">Lorem Ipsum</Tab.Pane>
+                        <Tab.Pane eventKey="third">Lorem Ipsum</Tab.Pane>
                     </Tab.Content>
                     </col>
                 </Row>
