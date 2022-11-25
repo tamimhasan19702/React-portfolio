@@ -56,6 +56,10 @@ export const Contact = () => {
                         />
                         </Col>
 
+                        <Col>
+                        <textarea rows="6" value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message',e.target.value)}/>
+                        </Col>
+
                     </Row>
                   </form>
                   </Col>
