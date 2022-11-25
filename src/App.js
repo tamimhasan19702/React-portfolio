@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Banner } from './components/Banner/Banner';
 import { Skills } from './components/Skills/Skills';
 import { Projects } from './components/Projects/Projects';
-import { Testimonial } from './components/Testimonial/Testimonial';
+import { Contact } from './components/Contact/Contact';
 
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
       <Banner />
       <Skills/>
       <Projects />
-      <Testimonial/>
+      <Contact/>
     </div>
   )
 }
