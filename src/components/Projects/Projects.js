@@ -7,7 +7,7 @@ import colorSharp2 from '../../assets/img/color-sharp2.png';
 
 export const Projects = () => {
     
-    const Tabs = [
+    const Projects = [
         {
             title: "Bussiness Startup",
             description: "Design & Development",
@@ -44,7 +44,7 @@ export const Projects = () => {
     <section className="project" id="project">
        <Container>
         <Row>
-            <Col>
+            <Col size={12}>
             <h2>Projects</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur labore aut debitis sed nobis at.</p>
             <Tab.Container id="projects-tabs" defaultActiveKey="first">
@@ -68,11 +68,11 @@ export const Projects = () => {
                <Tab.Pane eventKey="first">
                <Row>
                {
-                Tabs.map((tab,index) => {
+                Projects.map((tab,index) => {
                     return (
                        <ProjectCard
                        key={index}
-                       {...Tabs}
+                       {...tab}
                        /> 
                     )
                 })
