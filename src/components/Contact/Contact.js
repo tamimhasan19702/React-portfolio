@@ -22,6 +22,10 @@ export const Contact = () => {
             [category]: value
         })
     }
+
+    const handleSubmit = () => {
+
+    }
    
     return(
         <section className='contact' id='connect'>
@@ -33,7 +37,7 @@ export const Contact = () => {
 
                   <Col md={6}>
                   <h2>Get In Touch</h2>
-                  <form>
+                  <form onSubmit={handleSubmit}>
                     <Row>
                        
                         <Col sm={6} className="px-1">
