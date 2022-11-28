@@ -1,4 +1,5 @@
 import MailChimpSubscribe from 'react-mailchimp-subscribe';
+import { Newsletter } from './Newsletter/Newsletter';
 
 export const MailChimpForm = () => {
     const postUrl = `${process.env.REACT_API_MAILCHIMP_URL}?u=${process.env.REACT_API_MAILCHIMP_U}&id=${process.env.REACT_API_MAILCHIMP_ID}`;
