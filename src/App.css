@@ -354,7 +354,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Projects */
 
 .project{
-  padding: 80px 0;
+  padding: 120px 0;
+  z-index: -1;
   position: relative;
   background-color: black;
 }
@@ -574,7 +575,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 80px;
   margin-top: -122px;
 }
-.newsletter-bx h3{
+.newsletter h3{
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2em;
