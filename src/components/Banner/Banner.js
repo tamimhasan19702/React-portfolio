@@ -2,6 +2,9 @@ import { useState, useEffect } from 'react';
 import { Container, Row ,Col} from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap";
 import headerImg from '../../assets/img/header-img.svg';
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+import { isVisible } from '@testing-library/user-event/dist/utils';
 
 export const Banner = () => {
 
@@ -48,10 +51,17 @@ export const Banner = () => {
             <Row className="align-items-center">
                 
                 <Col xs={12} md={6} xl={7}>
+
+                  <TrackVisibility>
+                  {({ isVisible }) =>
+                    <div className={isVisible ? "animated__animated animate__fadeIn" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi, I am Tamim Hasan`} <span className="wrap">{text}</span></h1>
+                  <h1>{`Hi, I am Tamim Hasan`} <br/> <span className="wrap">{text}</span></h1>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores consequatur, voluptas laboriosam perspiciatis assumenda eaque ratione nihil. Asperiores consequatur, voluptas laboriosam perspiciatis assumenda eaque ratione nihil. </p>
                   <button onClick={() => console.log(`connect`)}>Let's Connect</button>
+                  </div>}
+                  </TrackVisibility>
+
                 </Col>
 
                <Col xs={12} md={6} xl={5}>
